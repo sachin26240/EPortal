@@ -17,7 +17,6 @@ if (isset($_POST["admin"])) {
 
     if ($count == 1) {
         $_SESSION['myusername'] = $myusername;
-        $_SESSION['login_user'] = $myusername;
         echo "<script>window.location.href = 'basic.php';</script>";
     } else {
         echo "<script>alert('Invalid Username or Password')</script>";
@@ -31,7 +30,7 @@ if (isset($_POST["consultant"])) {
     $myusername = mysqli_real_escape_string($db, $_POST['email']);
     $mypassword = mysqli_real_escape_string($db, $_POST['password']);
 
-    $sql = "SELECT adminID FROM admin WHERE username='$myusername' and password = '$mypassword'";
+    $sql = "SELECT consultID FROM consultant WHERE username='$myusername' and password = '$mypassword'";
     $result = mysqli_query($db, $sql);
     // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     // $active = $row['active'];
@@ -41,15 +40,15 @@ if (isset($_POST["consultant"])) {
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if ($count == 1) {
-        $_SESSION['myusername'] = $myusername;
-        $_SESSION['login_user'] = $myusername;
-        echo "<script>window.location.href = 'basic.php';</script>";
+        $_SESSION['username'] = $myusername;
+        echo "<script>window.location.href = 'pro.php';</script>";
     } else {
         echo "<script>alert('Invalid Username or Password')</script>";
     }
     mysqli_close($db);
 }
 ?>
+<link href="assets/css/loginstyle.css" rel="stylesheet">
 <footer id="footer">
     <div class="container">
         <h3>Selecao</h3>
@@ -105,3 +104,12 @@ if (isset($_POST["consultant"])) {
         </div>
     </div>
 </footer><!-- End Footer -->
+<script>
+    var modal = document.getElementById('id01');
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>

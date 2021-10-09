@@ -28,8 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/loginstyle.css" rel="stylesheet">
-
+  
   <!-- =======================================================
   * Template Name: Selecao - v4.5.0
   * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
@@ -898,15 +897,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    var modal = document.getElementById('id01');
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+ 
 </body>
 
 </html>

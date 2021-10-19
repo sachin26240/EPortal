@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  
+
   <!-- =======================================================
   * Template Name: Selecao - v4.5.0
   * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
@@ -63,32 +63,32 @@
             <ul>
               <li class="dropdown"><a href="#"><span>Patent</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">E-Filing</a></li>
-                  <li><a href="#">Consultancy</a></li>
+                  <li><a href="workflow\PatentWorkflow.pdf" target="_blank">E-Filing</a></li>
+                  <li><a href="paypro.php">Consultancy</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Copyright</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">E-Filing</a></li>
-                  <li><a href="#">Consultancy</a></li>
-                  <li><a href="basic.php#noc">Apply NOC</a></li>
+                  <li><a href="workflow\CopyrightWorkflow.pdf" target="_blank">E-Filing</a></li>
+                  <li><a href="paypro.php">Consultancy</a></li>
+                  <li><a href="paybasic.php#noc">Apply NOC</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Trademark</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">E-Filing</a></li>
-                  <li><a href="#">Consultancy</a></li>
+                  <li><a href="workflow\TrademarkWorkflow.pdf" target="_blank">E-Filing</a></li>
+                  <li><a href="paypro.php">Consultancy</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>SICLD</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">E-Filing</a></li>
-                  <li><a href="#">Consultancy</a></li>
+                  <li><a href="paypro.php">Consultancy</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -107,7 +107,7 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>IPR E-PORTAL</span></h2>
-          <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <p class="animate__animated fanimate__adeInUp">Intellectual property is a category of property that includes intangible creations of the human intellect. There are many types of intellectual property, and some countries recognize more than others.</p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
       </div>
@@ -115,18 +115,27 @@
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">Copyright</h2>
+          <p class="animate__animated animate__fadeInUp">Copyright is a type of intellectual property that gives its owner the exclusive right to make copies of a creative work, usually for a limited time. The creative work may be in a literary, artistic, educational, or musical form.</p>
+          <a href="https://en.wikipedia.org/wiki/Copyright" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          <h2 class="animate__animated animate__fadeInDown">Patent</h2>
+          <p class="animate__animated animate__fadeInUp">A patent is a type of intellectual property that gives its owner the legal right to exclude others from making, using, or selling an invention for a limited period of years, in exchange for publishing an enabling public disclosure of the invention.</p>
+          <a href="https://en.wikipedia.org/wiki/Patent" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Trademark</h2>
+          <p class="animate__animated animate__fadeInUp">A trademark is a type of intellectual property consisting of a recognizable sign, design, or expression which identifies products or services of a particular source from those of others.</p>
+          <a href="https://en.wikipedia.org/wiki/Trademark" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
       </div>
 
@@ -358,22 +367,22 @@
             <div class="icon-box" data-aos="zoom-in-left">
               <div class="icon"><i class="bi bi-pencil-square" style="color: #ff689b;"></i></div>
               <h4 class="title"><a href="efiling.php#efiling">E-Filing</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description"> Copyright exists from the moment the work is created and Filing is the only way to get it. </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
               <div class="icon"><i class="bi bi-briefcase" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="pro.php#consultancy">Consultancy</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="paypro.php">Consultancy</a></h4>
+              <p class="description">Consultants provide expert opinions, analysis, and recommendations to organizations or individuals, based on their own expertise.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
               <div class="icon"><i class="bi bi-journal-check" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="basic.php#noc">No Objection Certificate</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="paybasic.php">No Objection Certificate</a></h4>
+              <p class="description">No Objection Certificate (NOC) is a legal document, issued by an institute to say that they have no objection to the mentioned details in the document.</p>
             </div>
           </div>
         </div>
@@ -382,7 +391,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!-- <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -492,7 +501,7 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+    </section>End Portfolio Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
@@ -510,12 +519,12 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+
+                  I would like to express my heartfelt gratitude to the entire IPR E-Portal for their constant support and expert guidance during the copyright filing process.
+                  The suggestions by the cell were really helpful in responding to the discrepancy letter. Along with that, the template of NOC letter provided by the cell assisted in making the whole process seamless.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+                <h3>Rahul Roy</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -523,12 +532,10 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  I would like to thank IPR EPortal who helped me and my group in filing the copyright for our semester 4 mini project. They provided us with the template for the NOC letter which resulted in nonchalant process of filing the copyright. We were obliged to get assistance from the IPR CELL.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
+                <h3>Virat Sharma</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -536,12 +543,10 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  I would like to express my heartfelt gratitude to the entire IPR E-Portal for their constant support and expert guidance during the copyright filing process.
+                  The suggestions by the cell were really helpful in responding to the discrepancy letter. Along with that, the template of NOC letter provided by the cell assisted in making the whole process seamless. <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
+                <h3>Rohit Kohli</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -549,25 +554,10 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  I would like to thank IPR EPortal who helped me and my group in filing the copyright for our semester 4 mini project. They provided us with the template for the NOC letter which resulted in nonchalant process of filing the copyright. We were obliged to get assistance from the IPR CELL.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
+                <h3>Suresh Iyer</h3>
               </div>
             </div><!-- End testimonial item -->
 
@@ -614,7 +604,7 @@
                 <li class="na">Consultancy</li>
               </ul>
               <div class="btn-wrap">
-                <a href="basic.php" class="btn-buy">Buy Now</a>
+                <a href="paybasic.php" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
@@ -629,7 +619,7 @@
                 <li>Consultancy</li>
               </ul>
               <div class="btn-wrap">
-                <a href="pro.php" class="btn-buy">Buy Now</a>
+                <a href="paypro.php" class="btn-buy">Buy Now</a>
               </div>
             </div>
           </div>
@@ -667,58 +657,39 @@
         <ul class="faq-list">
 
           <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What is Patent? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                A patent is the granting of a property right by a sovereign authority to an inventor. This grant provides the inventor exclusive rights to the patented process, design, or invention for a designated period in exchange for a comprehensive disclosure of the invention. They are a form of incorporeal right.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">What is Copyright? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                A copyright is a collection of rights that automatically vest to someone who creates an original work of authorship like a literary work, song, movie or software. These rights include the right to reproduce the work, to prepare derivative works, to distribute copies, and to perform and display the work publicly.
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">What is Trademark? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
+                A trademark is a unique symbol or word(s) used to represent a business or its products. Once registered, that same symbol or series of words cannot be used by any other organization, forever, as long as it remains in use and proper paperwork and fees are paid. </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is SICLD? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
+                The main idea behind the Semiconductor Integrated Circuits Layout-Design Act (SICLD), 2000 is to provide protection of Intellectual Property Right (IPR) in the area of Semiconductor Integrated Circuit Layout-Designs and for matters connected therewith or incidental thereto. </p>
             </div>
           </li>
 
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
 
         </ul>
 
@@ -734,12 +705,12 @@
           <p>Our Hardworking Team</p>
         </div>
 
-        <div class="row">
+        <div class="row d-flex justify-content-center">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/Yash Rane.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -748,8 +719,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Yash Rane</h4>
+
               </div>
             </div>
           </div>
@@ -757,7 +728,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/Tarang Ahuja.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -766,8 +737,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Tarang Ahuja</h4>
+
               </div>
             </div>
           </div>
@@ -775,7 +746,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/Sachin Singh.jpeg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -784,30 +755,11 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Sachin Singh</h4>
+
               </div>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -829,19 +781,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Mumbai, Maharashtra, India</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>ipreportal@ipr.ac.in</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+91 90000 80000</p>
               </div>
 
             </div>
@@ -850,13 +802,13 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form method="post" role="form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
@@ -866,12 +818,60 @@
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div id="error-message"></div>
+                <div id="sent-message"></div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" name="contact">Send Message</button></div>
             </form>
+            <?php
+
+            use PHPMailer\PHPMailer\PHPMailer;
+            use PHPMailer\PHPMailer\SMTP;
+            use PHPMailer\PHPMailer\Exception;
+
+            if (isset($_POST["contact"])) {
+              // session_start();
+              // username and password sent from form 
+              $name = $_POST['name'];
+              $email = $_POST['email'];
+              $subject = $_POST['subject'];
+              $message = $_POST['message'];
+              require 'phpmailer/vendor/autoload.php';
+
+              //Create an instance; passing `true` enables exceptions
+              $mail = new PHPMailer(true);
+
+              try {
+                //Server settings
+                // $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+                $mail->SMTPDebug = 0;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'sachine027890@gmail.com';                     //SMTP username //EmailID
+                $mail->Password   = 'rollno51';                               //SMTP password //Email passsword
+                $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+                $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                //Recipients
+                $mail->setFrom('sachine027890@gmail.com', 'IPR-EPORTAL');
+                $mail->addAddress($email, $name);     //Add a recipient
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = $subject;
+                $mail->Body    = $message;
+                // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+                if ($mail->send()) {
+                  echo "<script>window.location.href = 'contactthankyou.php';</script>";
+                } else {
+                  echo '<script>alert(\'Your message has not been sent. Thank you!\');</script>';
+                }
+              } catch (Exception $e) {
+                echo '<script>document.getElementById("error-message").innerHTML=\'Your message has been not sent. Thank you!\';</script>';
+              }
+            }
+            ?>
 
           </div>
 
@@ -897,7 +897,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
- 
+
 </body>
 
 </html>

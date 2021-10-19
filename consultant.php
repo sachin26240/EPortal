@@ -54,14 +54,64 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="index.php">Logout</a></li>
+                    <li>
+                        <a>
+                            <form method="post"><input type="submit" name="logout" value="Logout" style="background: none; border:none; color:aliceblue"></form>
+                        </a>
+                    </li>
+                    <li style="color: #ef6603; font-size:larger">
+                        <?php echo 'Hello,' . $_SESSION["consultant"]; ?>
+                    </li>
                 </ul>
+                <?php
+                if (isset($_POST["logout"])) {
+                    unset($_SESSION["consultant"]);
+                    session_destroy();
+                    echo "<SCRIPT>window.location ='index.php';</SCRIPT>";
+                }
+                ?>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
-    
+    <br>
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>Customer</h2>
+                <p>Details</p>
+            </div>
+
+            <div class="row">
+                <?php
+                $userID = mysqli_real_escape_string($db, $_SESSION['consultant']);
+                $sql = "SELECT * FROM allotement WHERE consultID=(SELECT consultID from consultant where username='$userID');";
+                $result = mysqli_query($db, $sql);
+                // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                // $active = $row['active'];
+
+                $count = mysqli_num_rows($result);
+                while ($rows = mysqli_fetch_assoc($result)) {
+                ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="zoom-in-left">
+                            <div class="icon"><i class="bi bi-person-square" style="color: #e9bf06;"></i></div>
+                            <h4 class="title"><a href=""><?php echo $rows['name'] ?></a></h4>
+                            <p class="description">TOPIC: <?php echo $rows['topic'] ?></p>
+                            <p class="description">IPR: <?php echo $rows['ipr'] ?></p>
+                            <p class="description">MOBILE: <?php echo $rows['mobile'] ?></p>
+                            <p class="description">EMAIL: <?php echo $rows['email'] ?></p>
+                            <p class="description">ACCESSKEY: <?php echo $rows['accessKey'] ?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
     <?php include("footer.php"); ?>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

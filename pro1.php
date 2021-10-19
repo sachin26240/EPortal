@@ -54,7 +54,8 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="index.php">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#form">Consultancy</a></li>
+                    <li><a class="nav-link scrollto" onclick="warning()" style="cursor: pointer;">Home</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -81,6 +82,7 @@
                             <input type="text" class="form-control" id="topic" name="topic">
                             <label for="ipr">Intellectual Property Rights:</label>
                             <select id='ipr' name='ipr' class="form-control">
+                                <option value="">Select an Option</option>
                                 <option value="Patent">Patent</option>
                                 <option value="Copyright">Copyright</option>
                                 <option value="Trademark">Trademark</option>
@@ -91,12 +93,17 @@
                             <label for="email">Email:</label>
                             <input type="text" class="form-control" id="email" name="email">
                             <label for="key">Generate Key:</label>
-                            <input type="text" class="form-control" id="key" name="key">
+                            <input type="text" class="form-control" id="key" name="key" readonly>
                             <button type="button" style="float: right;" onclick="random()">Generate</button><br>
                             <input class="btn btn-primary my-2 align-center " type="submit" value="Allot" name="allotement">
                         </div>
                     </form>
                     <?php
+
+                    use PHPMailer\PHPMailer\PHPMailer;
+                    use PHPMailer\PHPMailer\SMTP;
+                    use PHPMailer\PHPMailer\Exception;
+
                     if (isset($_POST["allotement"])) {
                         $name = mysqli_real_escape_string($db, $_POST['name']);
                         $topic = mysqli_real_escape_string($db, $_POST['topic']);
@@ -111,18 +118,72 @@
                         $count = mysqli_num_rows($result);
                         $random = rand(1, $count);
 
-                        $sql1 = "INSERT INTO allotement (ID, name,topic,ipr,mobile,email,accessKey,counsultID) VALUES (NULL, '$name', '$topic', '$ipr', '$mobile', '$email', '$key', '$random')";
-                        $result1 = mysqli_query($db, $sql1) or die(mysqli_error($db));
-                        // $result = mysqli_query($db, $sql);
-                        if (mysqli_affected_rows($db) > 0) {
-                            $sql2 = "SELECT name FROM `consultant` WHERE `consultID`='$random'";
-                            $query = mysqli_query($db, $sql2)  or die(mysqli_error($db));
-                            $row = mysqli_fetch_row($query);
+                        // echo '<script>alert(' . $count . ');</script>';
+                        $sql2 = "SELECT name FROM `consultant` WHERE `consultID`='$random'";
+                        $query = mysqli_query($db, $sql2)  or die(mysqli_error($db));
+                        $row = mysqli_fetch_row($query);
 
-                            $cosultname = $row[0];
-                            echo "<script>alert('Congratulation Consultant Alloted Name:" . $cosultname . " Remember the key to verify')</script>";
-                        } else {
-                            echo "<script>alert('not inserted')</script>";
+                        $consultname = $row[0];
+                        // echo '<script>alert(' . $random . ');</script>';
+
+                        require 'phpmailer/vendor/autoload.php';
+
+                        //Create an instance; passing `true` enables exceptions
+                        $mail = new PHPMailer(true);
+
+                        try {
+                            //Server settings
+                            // $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+                            $mail->SMTPDebug = 0;                      //Enable verbose debug output
+                            $mail->isSMTP();                                            //Send using SMTP
+                            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                            $mail->Username   = 'sachine027890@gmail.com';                     //SMTP username //EmailID
+                            $mail->Password   = 'rollno51';                               //SMTP password //Email passsword
+                            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+                            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                            //Recipients
+                            $mail->setFrom('sachine027890@gmail.com', 'IPR-EPORTAL');
+                            $mail->addAddress($email, $name);     //Add a recipient
+                            // $mail->addAddress('ellen@example.com');               //Name is optional
+                            // $mail->addReplyTo($receiver, 'Information');
+                            // $mail->addCC('cc@example.com');
+                            // $sender = $_POST['email'];
+                            // $mail->addCC($sender);
+                            // $mail->addBCC('bcc@example.com');
+
+                            //Attachments
+                            //Add attachments
+                            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+                            //Content
+                            $mail->isHTML(true);                                  //Set email format to HTML
+                            $mail->Subject = 'Consultant Alloted for ' . $topic;
+                            $mail->Body    = 'Dear Customer, You have been alloted the consultant. Your Consultant Name is ' . $consultname . ' and Key is \'' . $key . '\'. Share this key with consultant for verification. Thank you.';
+                            // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+                            $mail->send();
+                            try {
+                                $sql1 = "INSERT INTO allotement (ID, name,topic,ipr,mobile,email,accessKey,consultID) VALUES (NULL, '$name', '$topic', '$ipr', '$mobile', '$email', '$key', '$random')";
+                                $result1 = mysqli_query($db, $sql1) or die(mysqli_error($db));
+                                // $result = mysqli_query($db, $sql);
+                                if (mysqli_affected_rows($db) > 0) {
+                                    echo "<script>alert('Consultant Alloted, Check your mail')</script>";
+                                    echo "<script>window.location.href = 'index.php';</script>";
+                                } else {
+                                    echo "<script>alert('Something went wrong')</script>";
+                                }
+                            } catch (Exception $f) {
+                                echo $f;
+                            }
+                            // echo 'Message has been sent';
+                            // echo "<script language='javascript' type='text/javascript'>
+                            //     window.location.href = 'index.php';
+                            // </script>";
+                        } catch (Exception $e) {
+                            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                            echo "<script>alert('Enter Valid Email.')</script>";
                         }
                     }
                     mysqli_close($db);
@@ -151,6 +212,12 @@
             const result = Math.random().toString(36).substring(2, 9);
             console.log(result);
             document.getElementById('key').value = result;
+        }
+
+        function warning() {
+            if (confirm('Do you really want to quit.')) {
+                window.location.href = 'index.php';
+            }
         }
     </script>
 </body>

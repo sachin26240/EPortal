@@ -328,7 +328,7 @@ if (isset($_POST["submit"])) {
                 <ul>
                     <li><a class="nav-link scrollto" href="#efiling">EFiling</a></li>
                     <li><a class="nav-link scrollto" href="#noc">NOC</a></li>
-                    <li><a class="nav-link scrollto" href="index.php">Home</a></li>
+                    <li><a class="nav-link scrollto" onclick="warning()" style="cursor: pointer;">Home</a></li>
                     <!-- <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
                     <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
                     <li class="dropdown"><a href="#"><span>IPR</span> <i class="bi bi-chevron-down"></i></a>
@@ -386,30 +386,30 @@ if (isset($_POST["submit"])) {
                     <div class="col-lg-4 col-md-6">
                         <div class="icon-box" data-aos="zoom-in-left">
                             <div class="icon"><i class="bi bi-pencil-square" style="color: #ff689b;"></i></div>
-                            <h4 class="title"><a href="">Patent</a></h4>
-                            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                            <h4 class="title"><a href="workflow\PatentWorkflow.pdf" target="_blank">Patent</a></h4>
+                            <p class="description">A patent is the granting of a property right by a sovereign authority to an inventor.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
                         <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
                             <div class="icon"><i class="bi bi-briefcase" style="color: #e9bf06;"></i></div>
-                            <h4 class="title"><a href="">Copyright</a></h4>
-                            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                            <h4 class="title"><a href="workflow\CopyrightWorkflow.pdf" target="_blank">Copyright</a></h4>
+                            <p class="description">A copyright is a collection of rights that automatically vest to someone who creates an original work of authorship like a literary work, song, movie or software.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
                         <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
                             <div class="icon"><i class="bi bi-journal-check" style="color: #3fcdc7;"></i></div>
-                            <h4 class="title"><a href="">Trademark</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            <h4 class="title"><a href="workflow\TrademarkWorkflow.pdf" target="_blank">Trademark</a></h4>
+                            <p class="description">A trademark is a unique symbol or word(s) used to represent a business or its products.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
                         <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
                             <div class="icon"><i class="bi bi-journal-check" style="color: #3fcdc7;"></i></div>
                             <h4 class="title"><a href="">SICLD</a></h4>
-                            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                            <p class="description">The main idea behind the SICLD, 2000 is to provide protection of IPR in the area of Semiconductor Integrated Circuit Layout-Designs.</p>
                         </div>
                     </div>
                 </div>
@@ -520,7 +520,13 @@ if (isset($_POST["submit"])) {
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
+    <script>
+        function warning() {
+            if (confirm('Do you really want to quit.')) {
+                window.location.href = 'index.php';
+            }
+        }
+    </script>
 </body>
 
 </html>

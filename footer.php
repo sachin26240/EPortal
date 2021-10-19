@@ -16,7 +16,7 @@ if (isset($_POST["admin"])) {
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if ($count == 1) {
-        $_SESSION['myusername'] = $myusername;
+        $_SESSION['admin'] = $myusername;
         echo "<script>window.location.href = 'basic.php';</script>";
     } else {
         echo "<script>alert('Invalid Username or Password')</script>";
@@ -40,8 +40,8 @@ if (isset($_POST["consultant"])) {
     // If result matched $myusername and $mypassword, table row must be 1 row
 
     if ($count == 1) {
-        $_SESSION['username'] = $myusername;
-        echo "<script>window.location.href = 'pro.php';</script>";
+        $_SESSION['consultant'] = $myusername;
+        echo "<script>window.location.href = 'consultant.php';</script>";
     } else {
         echo "<script>alert('Invalid Username or Password')</script>";
     }
@@ -51,8 +51,8 @@ if (isset($_POST["consultant"])) {
 <link href="assets/css/loginstyle.css" rel="stylesheet">
 <footer id="footer">
     <div class="container">
-        <h3>Selecao</h3>
-        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+        <h3>IPR E-PORTAL</h3>
+        <p>Intellectual property is a category of property that includes intangible creations of the human intellect. There are many types of intellectual property, and some countries recognize more than others.</p>
         <div class="social-links">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -92,15 +92,15 @@ if (isset($_POST["consultant"])) {
 
             </div><br>
         </div>
-        <div class="copyright">
+        <!-- <div class="copyright">
             &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
-        </div>
+        </div> -->
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://bootstrapmade.com/">IPR E-PORTAL TEAM</a>
         </div>
     </div>
 </footer><!-- End Footer -->
